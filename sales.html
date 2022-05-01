@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+<title>Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--------------icons------->
+<script src="https://kit.fontawesome.com/aa802870de.js" crossorigin="anonymous"></script>
+<!-- Volt CSS -->
+<link type="text/css" href="../../css/volt.css" rel="stylesheet">
+<link type="text/css" href="../../css/products.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard_theme_dots.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
+ 
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+        <a class="navbar-brand me-lg-5" href="../../pages/dashboard/dashboard.html">
+    
+        </a>
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+            <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+      <div class="sidebar-inner px-4 pt-3">
+        <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+          <div class="d-flex align-items-center">
+            <div class="avatar-lg me-4">
+              <img src="../../assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white"
+                alt="Bonnie Green">
+            </div>
+            <div class="d-block">
+                <!---------------------TODO:PrintUserName from Database-->
+              <h2 class="h5 mb-3">Hi, Bonnie Green</h2>
+              <a href="../../pages/examples/sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+                <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
+                Sign Out
+              </a>
+            </div>
+          </div>
+          <div class="collapse-close d-md-none">
+            <a href="#sidebarMenu" data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </a>
+          </div>
+        </div>
+        <ul class="nav flex-column pt-3 pt-md-0">
+          <li class="nav-item">
+            <a href="../../pages/dashboard/dashboard.html" class="nav-link d-flex align-items-center">
+              <span class="sidebar-icon">
+             
+              </span>
+              <span class="mt-1 ms-1 sidebar-text">Overview</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../dashboard/dashboard.html" class="nav-link">
+              <span class="sidebar-icon">
+                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+              </span> 
+              <span class="sidebar-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="../dashboard/sales.html" target="_blank" class="nav-link d-flex justify-content-between">
+              <span>
+                <span class="sidebar-icon">
+                  <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                </span>
+                <span class="sidebar-text">Products</span>
+              </span>
+              
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="../dashboard/tasks.html" class="nav-link">
+              <span class="sidebar-icon">
+                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
+              </span>
+              <span class="sidebar-text">Tasks</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="../../pages/settings.html" class="nav-link">
+              <span class="sidebar-icon">
+                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+              </span>
+              <span class="sidebar-text">Settings</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../dashboard/Users.html"  class="nav-link d-flex justify-content-between">
+              <span>
+                <span class="sidebar-icon">
+                  <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clip-rule="evenodd"></path></svg>
+                </span>
+                <span class="sidebar-text">Users</span>
+              </span>
+             
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" target="_blank" class="nav-link d-flex justify-content-between">
+              <span>
+                <span class="sidebar-icon">
+                  <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                </span>
+                <span class="sidebar-text">Tables</span>
+              </span>
+      
+            </a>
+          </li>
+          <li class="nav-item">
+            <span
+              class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+              data-bs-toggle="collapse" data-bs-target="#submenu-app">
+              <span>
+                <span class="sidebar-icon">
+                  <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
+                </span> 
+                <span class="sidebar-text">Sales</span>
+              </span>
+              <span class="link-arrow">
+                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+              </span>
+            </span>
+            <div class="multi-level collapse "
+              role="list" id="submenu-app" aria-expanded="false">
+              <ul class="flex-column nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="../../pages/settings.html">
+                    <span class="sidebar-text">Sales Dashboard</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+         
+          <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+          <li class="nav-item">
+            <a href="" target="_blank"
+              class="nav-link d-flex align-items-center">
+              <span class="sidebar-icon">
+                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+              </span>
+              <span class="sidebar-text">Sign Out <span class="badge badge-sm bg-secondary ms-1 text-gray-800"></span></span>
+            </a>
+          </li>
+         
+        
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+
+        <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
+<div class="container-fluid px-0">
+<div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
+  <div class="d-flex align-items-center">
+    <!-- Search form -->
+    <form class="navbar-search form-inline" id="navbar-search-main">
+      <div class="input-group input-group-merge search-bar">
+          <span class="input-group-text" id="topbar-addon">
+            <svg class="icon icon-xs" x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+            </svg>
+          </span>
+          <input type="text" class="form-control" id="topbarInputIconLeft" placeholder="Search" aria-label="Search" aria-describedby="topbar-addon">
+      </div>
+    </form>
+    <!-- / Search form -->
+  </div>
+  <!-- Navbar links -->
+ 
+</div>
+</div>
+</nav>
+
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-12 mb-4">
+                <div class="card bg-yellow-100 border-0 shadow">
+                    <div class="card-header d-sm-flex flex-row align-items-center flex-0">
+                        <div class="d-block mb-3 mb-sm-0">
+                            <div class="fs-5 fw-normal mb-2">Products Value</div>
+                            <h2 class="fs-3 fw-extrabold">$82,127
+                            </h2>
+                            <div class="small mt-2"> 
+                                <span class="fw-normal me-2">Yesterday</span>                              
+                                <span class="fas fa-angle-up text-success"></span>                                   
+                                <span class="text-success fw-bold">10.57%</span>
+                            </div>
+                        </div>
+                        <div class="d-flex ms-auto">
+                            <!-------------------TODO Add chart by month then week-->
+                            <a href="#" class="btn btn-secondary text-dark btn-sm me-2">Sold</a>
+                            <a href="#" class="btn btn-dark btn-sm me-3">Stock</a>
+                        </div>
+                    </div>
+                    <div class="card-body p-2">
+              <!-------------------Product Bar chart sits here-->
+                            <div id="wrapper">
+                                <div id="chart-area">
+                              
+                                </div>
+                                <div id="chart">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <div class="row" style="margin-top:20px;">
+            <div class="col-12 col-xl-8">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 shadow">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <!---------------TODO:Add Products Table-->
+                                        <h2 class="fs-5 fw-bold mb-0">Invoices</h2>
+                                    </div>
+                                    <div class="col text-end">
+                                        <a href="../../pages/transactions.html" class="btn btn-sm btn-primary">Update Table</a>
+                                        <a href="" class="btn btn-sm btn-primary">Add Product</a>
+
+                               
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+
+                                <table class="table align-items-center table-flush">
+                                    <thead>
+                                        <tr>
+                                            <td>TransactionID</td>
+                                            <td>Item</td>
+                                            <td>Employee</td>
+                                            <td>Progress</td>
+                                            <td>Items bought</td>
+                                            <td>unit price</td>
+                                            <td>total</td>
+                                            <td>indicator</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>WA1</td>
+                                            <td>Banjo</td>
+                                            <td>Galloway</td>
+                                            <td>processing</td>
+                                            <td>4</td>
+                                            <td> $81.0 </td>
+                                            <td> $324.0 </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA2</td>
+                                            <td>Stylophone</td>
+                                            <td>Johnson</td>
+                                            <td>processing</td>
+                                            <td>3</td>
+                                            <td> $100.0 </td>
+                                            <td> $300.0 </td>
+                                            <td>low stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA3</td>
+                                            <td>Maracas</td>
+                                            <td>Hoffman</td>
+                                            <td>processing</td>
+                                            <td>10</td>
+                                            <td> $9.0 </td>
+                                            <td> $90.0 </td>
+                                            <td>Refill</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA4</td>
+                                            <td>Harmonica</td>
+                                            <td>Melton</td>
+                                            <td>processing</td>
+                                            <td>2</td>
+                                            <td> $19.0 </td>
+                                            <td> $38.0 </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA0</td>
+                                            <td>Guitar</td>
+                                            <td>Gardner</td>
+                                            <td>not applicable</td>
+                                            <td>0</td>
+                                            <td> $265.0 </td>
+                                            <td> $-   </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA6</td>
+                                            <td>Violin</td>
+                                            <td>Holder</td>
+                                            <td>processing</td>
+                                            <td>12</td>
+                                            <td> $101.0 </td>
+                                            <td> $1,212.0 </td>
+                                            <td>Refill</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA7</td>
+                                            <td>Drumset</td>
+                                            <td>Hill</td>
+                                            <td>processing</td>
+                                            <td>4</td>
+                                            <td> $258.0 </td>
+                                            <td> $1,032.0 </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA8</td>
+                                            <td>Ukulele</td>
+                                            <td>Jenkins</td>
+                                            <td>processing</td>
+                                            <td>3</td>
+                                            <td> $86.0 </td>
+                                            <td> $258.0 </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA9</td>
+                                            <td>Bells</td>
+                                            <td>Wiggins</td>
+                                            <td>processing</td>
+                                            <td>4</td>
+                                            <td> $10.0 </td>
+                                            <td> $40.0 </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA0</td>
+                                            <td>Zither</td>
+                                            <td>Velasquez</td>
+                                            <td>not applicable</td>
+                                            <td>0</td>
+                                            <td> $56.0 </td>
+                                            <td> $-   </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA11</td>
+                                            <td>Piano</td>
+                                            <td>Woodward</td>
+                                            <td>processing</td>
+                                            <td>2</td>
+                                            <td> $139.0 </td>
+                                            <td> $278.0 </td>
+                                            <td>low stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA12</td>
+                                            <td>Steel Pan</td>
+                                            <td>Guzman</td>
+                                            <td>processing</td>
+                                            <td>1</td>
+                                            <td> $116.0 </td>
+                                            <td> $116.0 </td>
+                                            <td>Refill</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA13</td>
+                                            <td>Acoustic Guitar</td>
+                                            <td>Henderson</td>
+                                            <td>processing</td>
+                                            <td>1</td>
+                                            <td> $100.0 </td>
+                                            <td> $100.0 </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA0</td>
+                                            <td>Saxophone</td>
+                                            <td>Lawson</td>
+                                            <td>not applicable</td>
+                                            <td>0</td>
+                                            <td> $53.0 </td>
+                                            <td> $-   </td>
+                                            <td>low stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA15</td>
+                                            <td>Bagpipes</td>
+                                            <td>Benitez</td>
+                                            <td>processing</td>
+                                            <td>2</td>
+                                            <td> $70.0 </td>
+                                            <td> $140.0 </td>
+                                            <td>low stock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WA16</td>
+                                            <td>Turntables</td>
+                                            <td>Bonnie</td>
+                                            <td>processing</td>
+                                            <td>2</td>
+                                            <td> $177.0 </td>
+                                            <td> $354.0 </td>
+                                            <td>In Stock</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xxl-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <div class="card-header border-bottom d-flex align-items-center justify-content-between">
+                               <h2 class="fs-5 fw-bold mb-0">Inventory</h2>
+                               <!-------------TODO Add a query that points to a list of employees-->
+                               <a href="../../pages/dashboard/Users.html" class="btn btn-sm btn-primary">See all</a>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my--3">
+                                    <li class="list-group-item px-0">
+                                        <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <!-- Avatar -->
+                                            <a href="#" class="avatar">
+                                                <img class="rounded" alt="Image placeholder" src="guitarhero.svg">
+                                            </a>
+                                        </div>
+                                        <div class="col-auto ms--2">
+                                            <h4 class="h6 mb-0">
+                                                <a href="#">Guitars</a>
+                                            </h4>
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-success dot rounded-circle me-1"></div>
+                                                <small>43 in stock</small>
+                                            </div>
+                                        </div>
+                                        <div class="col text-end">
+                                            <a href="#" class="btn btn-sm btn-secondary d-inline-flex align-items-center">
+                                                <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                                Check Stock
+                                            </a>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <!-- Avatar -->
+                                                <a href="#" class="avatar">
+                                                    <img class="rounded" alt="Image placeholder" src="drumsicon.svg">
+                                                </a>
+                                            </div>
+                                            <div class="col-auto ms--2">
+                                                <h4 class="h6 mb-0">
+                                                    <a href="#">Drum Sets</a>
+                                                </h4>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="bg-warning dot rounded-circle me-1"></div>
+                                                    <small>15 in stock</small>
+                                                </div>
+                                            </div>
+                                            <div class="col text-end">
+                                                <a href="#" class="btn btn-sm btn-secondary d-inline-flex align-items-center">
+                                                    <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path></svg>
+                                                    Order Request
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <!-- Avatar -->
+                                                <a href="#" class="avatar">
+                                                    <img class="rounded" alt="Image placeholder" src="microphone.svg">
+                                                </a>
+                                            </div>
+                                            <div class="col-auto ms--2">
+                                                <h4 class="h6 mb-0">
+                                                    <a href="#">Microphone</a>
+                                                </h4>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="bg-danger dot rounded-circle me-1"></div>
+                                                    <small>2 in stock</small>
+                                                </div>
+                                            </div>
+                                            <div class="col text-end">
+                                                <a href="" class="btn btn-sm btn-secondary d-inline-flex align-items-center">
+                                                    <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path></svg>
+                                                    Order Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xxl-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <div class="card-header border-bottom d-flex align-items-center justify-content-between">
+                                <h2 class="fs-5 fw-bold mb-0">Process Orders</h2>
+                                 <a href="#" class="btn btn-sm btn-primary">See tasks</a>
+                             </div>
+<!---------------------------------------------------Where the invoicing form goes here and transmittes to DB--->
+                            <div class="card-body">
+                                <form id="regForm" action="../examples/actions.php">
+
+                                    <h1>Invoice Wizard</h1>
+                                    
+                                    <!-- One "tab" for each step in the form: -->
+                                    <div class="tab">Name:
+                                      <p><input oninput="this.className = ''"></p>
+                                      <label>Employee ID</label>
+                                      <p><input oninput="this.className = ''"></p>
+                                    </div>
+                                    
+                                    <div class="tab">Item:
+                                        <p><input oninput="this.className = ''"></p>
+                                        <div class="input-group mb-3">
+                                           
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                              <option selected>Assigned Products</option>
+                                              <option value="1">Guitars</option>
+                                              <option value="2">Turntables</option>
+                                           
+                                            </select>
+                                          </div>
+                                          <label>Quantity</label>
+                                          <p><input oninput="this.className = ''"></p>
+                                    </div>
+                                    
+                                    <div class="tab">Usermname
+                                       
+                                      <p><input oninput="this.className = ''"></p>
+                                      <label>Password</label>
+                                      <!-------------TODO: validate password-->
+                                      <p><input  oninput="checkValue(this);"></p>
+                                     
+                                    </div>
+                                    
+                                    <div class="tab">
+                                      <h1>Your response was sent to the server</h1>
+                                    </div>
+                                    
+                                    <div style="overflow:auto;">
+                                      <div style="float:right;">
+                                        <button class="btn btn-sm btn-primary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                        <button class="btn btn-sm btn-primary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- Circles which indicates the steps of the form: -->
+                                    <div style="text-align:center;margin-top:40px;">
+                                      <span class="step"></span>
+                                      <span class="step"></span>
+                                      <span class="step"></span>
+                                      <span class="step"></span>
+                                    </div>
+                                    
+                                    </form>
+                                
+         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-4">
+                <div class="col-12 px-0 mb-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-header d-flex flex-row align-items-center flex-0 border-bottom">
+                            <div class="d-block">
+                                <!---------------------TODO: Add query to count number of items with transaction IDs-->
+                                <div class="h6 fw-normal text-gray mb-2">Inventory</div>
+                                <h2 class="h3 fw-extrabold">421</h2>
+                                <div class="small mt-2">                               
+                                    
+                                </div>
+                            </div>
+                            <div class="d-block ms-auto">
+                                <button class="btn btn-sm btn-primary" id="export-button">Update Chart</button>
+                            </div>
+                        </div>
+                        <div class="card-body p-2">
+                            <!----------------TODO:Add a barchart for  Month 1 vs Month2 records-->
+                            <div class="ct-chart-ranking ct-golden-section ct-series-a">
+                                <div id="wrapper">
+                                    <div id="chart-area">
+                                  
+                                    </div>
+                                    <div id="Piechart">
+                                
+                            </div>
+                        </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 px-0 mb-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                                <div>
+                                    <div class="h6 mb-0 d-flex align-items-center">
+                                        <svg class="icon icon-xs text-gray-500 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path></svg>
+                                        Most Popular
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#" class="d-flex align-items-center fw-bold">
+                                        #1
+                                        <svg class="icon icon-xs text-gray-500 ms-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between border-bottom py-3">
+                                <div>
+                                    <div class="h6 mb-0 d-flex align-items-center">
+                                        <svg class="icon icon-xs text-gray-500 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"></path></svg>
+                                        Product
+                                    </div>
+                                    <div class="small card-stats">
+                                      <!--------TODO:Add Query to select product with the most transaction IDs-->
+                                        Violin
+                                        <svg class="icon icon-xs text-success" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#" class="d-flex align-items-center fw-bold">
+                                        #1
+                                        <svg class="icon icon-xs text-gray-500 ms-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between pt-3">
+                                <div>
+                                    <div class="h6 mb-0 d-flex align-items-center">
+                                        <svg class="icon icon-xs text-gray-500 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd"></path><path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z"></path></svg>
+                                        Lowest in Stock
+                                    </div>
+                                    <div class="small card-stats">
+                                        <!--------------TODO:Add a query to show the employee with the most commisions-->
+                                        Stylophone
+                                        <svg class="icon icon-xs text-success" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#" class="d-flex align-items-center fw-bold">
+                                        #1
+                                        <svg class="icon icon-xs text-gray-500 ms-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 px-0">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h2 class="fs-5 fw-bold mb-1">Transactions</h2>
+                            <p>If an item has a transaction ID of W0, it hasn't been bought. Changes made to this form are recorded in the DB.</p>
+                            <div class="d-block">
+                                <div class="d-flex align-items-center me-5">
+                                    <div class="">
+                                        
+                                    </div>
+                                    <div class="d-block">
+                                       
+
+                                        <!------------------TODO: Add PHP here to retrieve code from serverside here put the wizard here-->
+                                        
+    <!-------------------------------------------------------------Modal starts here in this container-->
+    <button type="button" class="btn btn-block btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-default">Edit table</button>
+    <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="h6 modal-title">Adjust the table here</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Accept</button>
+                    <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-------------------------------------------------------------Modal ends here in this container-->
+
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div class="col-12 px-0">
+<!------------------------------------------------Paste here!!!!!!-------------->
+<div class="card border-0 shadow" style="margin-top:30px;">
+<div class="card-header d-flex flex-row align-items-center flex-0 border-bottom">
+    <div class="d-block">
+        <!---------------------TODO: Add query to count number of items with transaction IDs-->
+        <div class="h6 fw-normal text-gray mb-2">Income Breakdown</div>
+        <h2 class="h3 fw-extrabold">$33k</h2>
+        <div class="small mt-2">                               
+            
+        </div>
+    </div>
+    <div class="d-block ms-auto">
+        <div class="d-flex align-items-center text-end mb-2">
+            <span class="dot rounded-circle bg-gray-800 me-2"></span>
+            <span class="fw-normal small">Profit</span>
+        </div>
+        <div class="d-flex align-items-center text-end">
+            <span class="dot rounded-circle bg-secondary me-2"></span>
+            <span class="fw-normal small">Comissions</span>
+        </div>
+    </div>
+</div>
+<div class="card-body p-2">
+    <!----------------TODO:Add a barchart for  Month 1 vs Month2 records-->
+    <div class="ct-chart-ranking ct-golden-section ct-series-a"></div>
+</div>
+</div>
+        </div>
+
+        <!--------------------------->
+      
+        
+    </main>
+    <!------------Bar Chart values and settings are edited here-->
+    <script>
+        
+     
+        var options = {
+          series: [{
+          name: 'Commisions',
+          data: [4, 5, 1, 7, 22, 33, 21]
+        }, {
+          name: 'Revenue',
+          data: [12, 17, 11, 9, 15, 11, 20]
+        }], 
+
+          chart: {
+          type: 'bar',
+          height: 350,
+          stacked: true,
+          stackType: '100%'
+        },
+        plotOptions: {
+          bar: {
+            horizontal: true,
+          },
+        },
+        stroke: {
+          width: 1,
+          colors: ['#fff']
+        },
+        
+        xaxis: {
+          categories: ["Guitar", "Piano", "Banjo", "Flute", "Bag Pipes", "Organ" ,"Ukelele"],
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val + "K"
+            }
+          }
+        },
+        fill: {
+          opacity: 1
+        
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'left',
+          offsetX: 40
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+      
+    
+    </script>
+
+      <!------------Pie Chart values and settings are edited here---------------->
+      <script>
+       
+       var options = {
+          series: [44, 55],
+          chart: {
+          width: 300,
+          type: 'pie',
+        },
+        labels: ['Items Sold', 'Items Stocked'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var Piechart = new ApexCharts(document.querySelector("#Piechart"), options);
+        Piechart.render();
+      
+      </script>
+   <!----------Wizard to add invoices to the DB-->
+   <script>
+       var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
+   </script>
+  
+</body>
+</html>
