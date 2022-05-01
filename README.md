@@ -15,6 +15,7 @@ The system should allow the administrator to adjust tables and export charts
 The administrator should be the only one able to access to dashboard for safety reasons
 The system should accurately calculate  and update values as they are adjusted
 The system should be able to display responsive charts.
+
 REQUIREMENTS
 In order for this system to work, there needs to be an administrator. The administrator needs to create a user, view sales and products statistics as well as inventory. The charts and tables should be exportable and should adjust if new input is added.  The system should then use this information to create a dashboard in which the user can view recommendations, progress and vital information about the current status of the business. Both the administrator and user should be able to view their own respective portals but users should not be able to input data. The administrator needs to be the only one with access to the dataset and should be the only one that can edit information. In order for the system to work autonomously, the following needs to be implemented:
 A secure database that holds employee data.
