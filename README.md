@@ -1,8 +1,13 @@
 # finalProject482
 PROJECT OVERVIEW
+
 This report highlights the steps taken to create a portal for a business management User interface. The interface is built to keep track of products, users and inventory for a specific business. The platform allows the admin to export charts seamlessly as well as update a company’s database. It allows the administrator to monitor key factors like Return on Investment and schedule/ manage tasks to be assigned to employees.
+
 PROBLEM STATEMENT
+
 When working within an organization, it can be difficult to keep track of products, employees and sales without an interface. The dashboard is built to create a platform on which statistics  and reports about each product, employee and sales are put in one place. 
+
+
 DESIRED END STATE
 The desired end state of the project is autonomy throughout the entire system. The user’s only task is to input data and the system is able to recognize, store and convert it into useful information. Listed below are the  desired characteristics of a fully functional dashboard.
 The system should be linked to a database that updates continuously. The integration should be seamless.
