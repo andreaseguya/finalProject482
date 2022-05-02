@@ -1,0 +1,21 @@
+<?php
+include_once("db_connect.php");
+
+
+$input = filter_input_array(INPUT_POST);
+if ($input['action'] == 'edit') {
+$update_field='';
+if(isset($input['ProductName'])) {
+$update_field.= "ProductName='".$input['Productname']."'";
+} else if(isset($input['Stock'])) {
+$update_field.= "stock='".$input['stock']."'";
+} else if(isset($input['UnitPrice'])) {
+$update_field.= "unitPrice='".$input['unitPrice']."'";
+}
+}
+if($update_field && $input['Transactionid']) {
+$sql_query = "UPDATE Products SET $update_field WHERE TransactionId='" . $input['TransactionId'] . "'";
+mysqli_query($conn, $sql_query) or die("database error:". mysqli_error($conn));
+}
+}
+?>
